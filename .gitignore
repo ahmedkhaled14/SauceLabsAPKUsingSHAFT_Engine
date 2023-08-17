@@ -1,0 +1,12 @@
+/target/
+/allure-results/
+/extent-reports/
+/execution-summary/
+debug.log
+generate_allure_report.bat
+generateJdk.*
+.settings
+.classpath
+.project
+/.idea/
+/bin/

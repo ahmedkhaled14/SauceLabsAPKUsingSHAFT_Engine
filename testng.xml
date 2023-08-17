@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="sauce Labs Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="sauceLabs_MobileAPK_Using_SHAFT_Engine">
+        <classes>
+            <class name="sauceLabsTests.CartFeatureTest">
+                <methods>
+                    <include name="testAddItemToTheCartAndValidateTitleAndPriceOfTheItem"/>
+                    <include name="testRemovingItemsFromTheCartAndValidateThatTheCartIsEmpty"/>
+                    <include name="testOnlineOrderingE2EScenario"/>
+                </methods>
+            </class>
+            <class name="sauceLabsTests.LoginFeatureTest">
+                <methods>
+                    <include name="testLoginUsingValidEmailAndPassword"/>
+                    <include name="testLoginUsingInvalidEmailOrPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
