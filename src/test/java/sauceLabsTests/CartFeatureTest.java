@@ -57,8 +57,14 @@ public class CartFeatureTest {
         homeScreen.clickOnAddToCartOnFirstProduct();
         homeScreen.clickOnCartIcon();
 
-        SHAFT.Validations.assertThat().object(productTitleInHomeScreen).isEqualTo(cartScreen.getFirstProductTitleInCartScreen());
-        SHAFT.Validations.assertThat().object(productPriceInHomeScreen).isEqualTo(cartScreen.getFirstProductPriceInCartScreen());
+        SHAFT.Validations.assertThat()
+                .object(productTitleInHomeScreen)
+                .isEqualTo(cartScreen.getFirstProductTitleInCartScreen())
+                .perform();
+        SHAFT.Validations.assertThat()
+                .object(productPriceInHomeScreen)
+                .isEqualTo(cartScreen.getFirstProductPriceInCartScreen())
+                .perform();
     }
 
     @Description("Given user open the application" +
